@@ -1,0 +1,1 @@
+add_library(bmp bmp.cpp grafix.cpp color.cpp pnghandling.cpp)
