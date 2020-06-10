@@ -90,7 +90,7 @@ Dataset II consists of the Arabidopsis thaliana, Vitis vinifera and Populus tric
 
 ```
 docker build -t "i-adhore" -f dockerfile .
-docker run -t "i-adhore"
+docker run -it "i-adhore"  i-adhore <parameters>
 ```
 
 ## Citation
