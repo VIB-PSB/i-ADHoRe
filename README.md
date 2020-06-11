@@ -33,9 +33,9 @@ mkdir build
 cd build
 cmake ..
 ```
-A useful option to specify for the cmake command is CMAKE_INSTALL_PREFIX so that
+A useful option to specify for the cmake command is `CMAKE_INSTALL_PREFIX` so that
 you can tell cmake where to install the software. For example, to install in
-your local $(HOME)/i-adhore directory you would run:
+your local `$(HOME)/i-adhore` directory you would run:
 
 ```
 cmake .. -DCMAKE_INSTALL_PREFIX=$(HOME)/i-adhore
@@ -53,8 +53,8 @@ And to install run (as root if necessary):
 make install
 ```
 
-It is required that you have a Pthreads library installed.  Support for MPI
-and Googletest unit testing framework is optional.
+It is required that you have a `Pthreads` library installed.  Support for `MPI`
+and `Googletest` unit testing framework is optional.
 
 ## Running the test cases:
 
@@ -87,14 +87,13 @@ Dataset II consists of the Arabidopsis thaliana, Vitis vinifera and Populus tric
 
 ## Run with docker
 
-
 ```
 docker build -t "i-adhore" -f dockerfile .
-docker run -it "i-adhore"  i-adhore <parameters>
+docker run "i-adhore" i-adhore <parameters>
 ```
+
+> Note that the input files need to be mounted inside the container.
 
 ## Citation
 
-Simillion, C., Janssens, K., Sterck, L., Van de Peer, Y. (2008) i-ADHoRe 2.0: An improved tool to detect degenerated genomic homology using genomic profiles. Bioinformatics 24(1):127-8.
-
-[DOI](http://dx.doi.org/doi:10.1093/bioinformatics/btm449)
+Simillion, C., Janssens, K., Sterck, L., Van de Peer, Y. (2008) i-ADHoRe 2.0: An improved tool to detect degenerated genomic homology using genomic profiles. [Bioinformatics 24(1):127-8](http://dx.doi.org/doi:10.1093/bioinformatics/btm449).
