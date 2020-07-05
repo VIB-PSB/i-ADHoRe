@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/VIB-PSB/i-ADHoRe/workflows/Docker%20Image%20CI/badge.svg)
+
 # i-ADHoRe 3
 
 ![](iadhore.png)
