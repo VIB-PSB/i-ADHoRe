@@ -96,6 +96,10 @@ docker run "i-adhore" i-adhore <parameters>
 
 > Note that the input files need to be mounted inside the container.
 
-## Citation
+## Citations
 
-Simillion, C., Janssens, K., Sterck, L., Van de Peer, Y. (2008) i-ADHoRe 2.0: An improved tool to detect degenerated genomic homology using genomic profiles. [Bioinformatics 24(1):127-8](http://dx.doi.org/doi:10.1093/bioinformatics/btm449).
+- Proost, S., Fostier, J., De Witte, D., Dhoedt, B., Demeester, P., Van de Peer, Y., & Vandepoele, K. (2012). i-ADHoRe 3.0—fast and sensitive detection of genomic homology in extremely large data sets. Nucleic acids research, 40(2), e11-e11.
+
+- Fostier, J., Proost, S., Dhoedt, B., Saeys, Y., Demeester, P., Van de Peer, Y., & Vandepoele, K. (2011). A greedy, graph-based algorithm for the alignment of multiple homologous gene lists. Bioinformatics, 27(6), 749-756.
+
+- Simillion, C., Janssens, K., Sterck, L., Van de Peer, Y. (2008) i-ADHoRe 2.0: An improved tool to detect degenerated genomic homology using genomic profiles. [Bioinformatics 24(1):127-8](http://dx.doi.org/doi:10.1093/bioinformatics/btm449).
