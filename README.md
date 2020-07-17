@@ -90,7 +90,7 @@ Dataset II consists of the Arabidopsis thaliana, Vitis vinifera and Populus tric
 ## Run with docker
 
 ```
-docker run vibpsb/i-adhore:3.0.0 i-adhore <parameters>
+docker run vibpsb/i-adhore i-adhore <parameters>
 ```
 
 > Note that the input files need to be mounted inside the container.
