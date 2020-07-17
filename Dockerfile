@@ -20,6 +20,5 @@ RUN cmake ..
 RUN make
 RUN make install
 
-
-
+WORKDIR /
 
