@@ -1,4 +1,4 @@
-![Docker Image CI](https://github.com/VIB-PSB/i-ADHoRe/workflows/Docker%20Image%20CI/badge.svg)
+![Docker Build Test](https://github.com/VIB-PSB/i-ADHoRe/workflows/Docker%20Build%20Test/badge.svg)  ![Publish Docker image](https://github.com/VIB-PSB/i-ADHoRe/workflows/Publish%20Docker%20image/badge.svg)
 
 # i-ADHoRe 3
 
@@ -90,8 +90,7 @@ Dataset II consists of the Arabidopsis thaliana, Vitis vinifera and Populus tric
 ## Run with docker
 
 ```
-docker build -t "i-adhore" -f dockerfile .
-docker run "i-adhore" i-adhore <parameters>
+docker run vibpsb/i-adhore i-adhore <parameters>
 ```
 
 > Note that the input files need to be mounted inside the container.
