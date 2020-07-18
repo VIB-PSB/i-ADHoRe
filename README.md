@@ -1,4 +1,4 @@
-![Docker Build Test](https://github.com/VIB-PSB/i-ADHoRe/workflows/Docker%20Build%20Test/badge.svg)  ![Publish Docker image](https://github.com/VIB-PSB/i-ADHoRe/workflows/Publish%20Docker%20image/badge.svg) [![](https://images.microbadger.com/badges/version/vibpsb/i-adhore.svg)](https://microbadger.com/images/vibpsb/i-adhore "Get your own version badge on microbadger.com")
+![Docker Build Test](https://github.com/VIB-PSB/i-ADHoRe/workflows/Docker%20Build%20Test/badge.svg)  ![Publish Docker image](https://github.com/VIB-PSB/i-ADHoRe/workflows/Publish%20Docker%20image/badge.svg) [![](https://images.microbadger.com/badges/version/vibpsb/i-adhore.svg)](https://microbadger.com/images/vibpsb/i-adhore "Get your own version badge on microbadger.com") [![Bio.tools](https://img.shields.io/badge/Bio.tools-i--adhore-orange.svg)](https://bio.tools/i-adhore)
 
 # i-ADHoRe 3
 
