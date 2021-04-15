@@ -9,6 +9,7 @@ COPY . /i-adhore
 RUN apt-get update && apt-get install -y \
     curl \
     cmake \
+    libpng-dev \
     build-essential
 
 RUN cd /i-adhore \
