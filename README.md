@@ -2,7 +2,7 @@
 
 # i-ADHoRe 3
 
-![](iadhore.png)
+![i-adhore image](iadhore.png)
 
 The i-ADHoRe algorithm is based on the initial ADHoRe algorithm. After detecting initial pairs of colinear segments using the basic ADHoRe algorithm, these pairs are aligned to each other to form a profile that combines their gene order and content information. This profile is then used to detect additional homologous segments that show conserved gene order and content when compared to the profile rather than individual segments. If such an additional segment is discovered, it is included in the profile as well and the search is repeated until no additional segments can be found. All results are outputted in tab delimited text files.
 
@@ -25,8 +25,13 @@ yum install cmake
 b) on Ubuntu / Debian distributions
 
 ```
-aptitude install cmake
+sudo apt-get install cmake
 ```
+
+> If you encounter problems try installing following packages `build-essential` and `libpng-dev` using following command:
+> ```
+> sudo apt-get install build-essential libpng-dev 
+> ```
 
 ### Installing i-Adhore
 
