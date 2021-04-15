@@ -28,7 +28,7 @@ b) on Ubuntu / Debian distributions
 sudo apt-get install cmake
 ```
 
-> If you encounter problems try installing following packages `build-essential` and `libpng-dev` using following command:
+> If you encounter problems try installing the packages `build-essential` and `libpng-dev` using following command:
 > ```
 > sudo apt-get install build-essential libpng-dev 
 > ```
