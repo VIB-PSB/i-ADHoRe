@@ -1208,6 +1208,7 @@ bool GHM::boxOverlap(SynthenicCloud& sCloud1, SynthenicCloud& sCloud2) const
             return true;
     }
 
+    return false;
 }
 
 bool GHM::cloudsOverlap(SynthenicCloud& sCloud1, SynthenicCloud& sCloud2) const

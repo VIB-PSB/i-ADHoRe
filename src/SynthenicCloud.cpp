@@ -152,9 +152,9 @@ double SynthenicCloud::calculateProbabilityBinomialDCorr(double APDensity) const
     double poomp=p/(1-p);
     double Pimo=omxn(p,n);
 
-    double F=Pimo; //cumulative Binomial Distr!! (will be corrected later on) 
+    double F=Pimo; //cumulative Binomial Distr!! (will be corrected later on)
 
-    /*if (x>minAB) 
+    /*if (x>minAB)
         cout << "calculateProbabilityBinomialDCorr fails x>min(a,b)!!" << endl;*/
     //NOTE No warning necessary since this means the cloud is definitely dense enough
     //it means that there must somewhere be a tandem in the cloud, the cumulative probability will be
@@ -267,6 +267,7 @@ int SynthenicCloud::getPackSize() const
 
     //anchorPoints in cloud
     packSize += anchorPoints.size()*AnchorPoint::getPackSize();
+    return packSize;
 }
 
 
@@ -300,7 +301,7 @@ int SynthenicCloud::pack(char *buffer) const
 
     int bufSize=buffer-bufferOrig;
     if (bufSize!=getPackSize()){
-        cout << "bufSize= " << bufSize << endl; 
+        cout << "bufSize= " << bufSize << endl;
         cout << "getPackSize()= " << getPackSize() << endl;
         cout << endl;
         cout << "anchorPoints.size= " << size << endl;
@@ -408,5 +409,3 @@ void SynthenicCloud::setRandomProbabilityBinomialDCorr(double APDensity)
 {
     random_probability=calculateProbabilityBinomialDCorr(APDensity);
 }
-
-

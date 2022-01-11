@@ -184,7 +184,7 @@ bool AlignmentDrawer::buildColorMatrixOverlappingCode(DataSet* data, int tandemG
 
 bool AlignmentDrawer::buildColorMatrixPostP(DataSet* data, int tandemG, set< Link >& homologs)
 {
-    buildColorMatrixOverlappingCode(data,tandemG, homologs.begin(), homologs.end());
+    return buildColorMatrixOverlappingCode(data,tandemG, homologs.begin(), homologs.end());
 }
 
 
@@ -360,4 +360,3 @@ void AlignmentDrawer::setBoxSize()
     squareHeight=maxChars*0.125;
     squareWidth=squareHeight;
 }
-

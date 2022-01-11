@@ -26,16 +26,8 @@ string SvgWriter::convertColor(const Color& color)
     char buffer[8];
     uint r,g,b;
     color.getIntegerRGB(r,g,b);
-    uint h1,h2,h3,h4,h5,h6; //temps used for conversion to hexadecimal string
 
-    h1=r/16;
-    h2=r%16;
-    h3=g/16;
-    h4=g%16;
-    h5=b/16;
-    h6=b%16;
-
-    sprintf(buffer,"#%x%x%x%x%x%x",h1,h2,h3,h4,h5,h6);
+    sprintf(buffer,"#%x%x%x",(unsigned char)r, (unsigned char)g, (unsigned char)b);
     string colorToString(buffer);
     return colorToString;
 }

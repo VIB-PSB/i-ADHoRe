@@ -109,7 +109,7 @@ void DataSet::deleteEvaluatedClouds()
 {
     //delete clouds
     vector<SynthenicCloud*>::const_iterator it=clouds.begin();
-    for (; it!=clouds.end(); it++) 
+    for (; it!=clouds.end(); it++)
         delete (*it);
 
     clouds.clear();
@@ -303,7 +303,8 @@ void DataSet::prepareOutput()
     // create output directory
     const string &outputPath = settings.getOutputPath();
     string command = "mkdir -p ";
-    system(command.append(outputPath).c_str());
+    if (system(command.append(outputPath).c_str()) == -1)
+        throw runtime_error("Cannot create directory " + outputPath);
 
     // create the output filenames
     geneFile = settings.getOutputPath();
@@ -639,6 +640,14 @@ void DataSet::flushCollinear()
     } else {
         for (unsigned int i = 0; i < evaluated_multiplicons.size(); i++) {
             Multiplicon &mpl = *evaluated_multiplicons[i];
+
+            try {
+                mpl.align(settings.getAlignmentMethod(),
+                          settings.getMaxGapsInAlignment());
+            } catch(const ProfileException& e) {
+                cout << e.what() << endl;
+                continue;
+            }
 
             int order = 0;
 
@@ -1248,7 +1257,16 @@ void DataSet::visualizeAlignedProfiles()
     string tempfilename=settings.getOutputPath()+"AlignmentMultiplicon";
 
     for (int i=0; i<evaluated_multiplicons.size(); i++) {
-        const Multiplicon& multiplicon=*evaluated_multiplicons[i];
+        Multiplicon& multiplicon=*evaluated_multiplicons[i];
+
+        try {
+                multiplicon.align(settings.getAlignmentMethod(),
+                                  settings.getMaxGapsInAlignment());
+        } catch(const ProfileException& e) {
+                cout << e.what() << endl;
+                continue;
+        }
+
         int id=multiplicon.getId();
         sprintf(buffer,"%i.svg",multiplicon.getId());
         string filename=tempfilename+string(buffer);
@@ -1315,5 +1333,3 @@ GeneList* DataSet::getGeneList(const string& listName, const string& genomeName)
     cerr << "Genelist with this name and genome not found!!" << endl;
     return NULL;
 }
-
-
