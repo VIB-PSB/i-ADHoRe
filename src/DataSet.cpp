@@ -646,7 +646,7 @@ void DataSet::flushCollinear()
                           settings.getMaxGapsInAlignment());
             } catch(const ProfileException& e) {
                 cout << e.what() << endl;
-                continue;
+                //continue;
             }
 
             int order = 0;
