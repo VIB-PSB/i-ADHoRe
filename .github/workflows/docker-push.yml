@@ -42,5 +42,5 @@ jobs:
           platforms: linux/arm64,linux/amd64
           context: .
           tags: |
-            vibpsb/i-adhore:latest
-            vibpsb/i-adhore:${{ steps.meta.outputs.tags }}
+            latest
+            ${{ steps.meta.outputs.tags }}
