@@ -41,5 +41,4 @@ jobs:
           push: true
           platforms: linux/arm64,linux/amd64
           context: .
-          tags: |
-            ${{ steps.meta.outputs.tags }}
+          tags: "3.1"
