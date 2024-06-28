@@ -26,4 +26,4 @@ jobs:
         with:
           push: true
           platforms: linux/arm64,linux/amd64
-          tags: vibpsb/i-adhore:latest, vibpsb/i-adhore:3.1
+          tags: vibpsb/i-adhore:latest, vibpsb/i-adhore:${{ steps.meta.outputs.tags }}
