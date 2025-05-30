@@ -42,10 +42,10 @@ cmake ..
 ```
 A useful option to specify for the cmake command is `CMAKE_INSTALL_PREFIX` so that
 you can tell cmake where to install the software. For example, to install in
-your local `$(HOME)/i-adhore` directory you would run:
+your local `${HOME}/i-adhore` directory you would run:
 
 ```
-cmake .. -DCMAKE_INSTALL_PREFIX=$(HOME)/i-adhore
+cmake .. -DCMAKE_INSTALL_PREFIX=${HOME}/i-adhore
 ```
 
 Afterwards run:
